@@ -66,7 +66,7 @@ const sendPDF = async (data) => {
       html: htmlContent,
     });
     const result = await MailComposer.composeAsync({
-      recipients: ["wenin@isn-italien.it"], // Replace with the recipient email
+      recipients: ["email"], // Replace with the recipient email
       subject: `${data.Name}`,
       body: "Bitte für diesen Kunden ein Angebot erstellen.",
       attachments: [uri],
