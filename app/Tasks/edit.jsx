@@ -204,19 +204,19 @@ const EditItem = () => {
               <Text>Menge</Text>
               <TextInput style={styles.input} keyboardType="numeric" placeholder="Menge" value={item.menge} onChangeText={(text) => handleChange(index, "menge", text)}/>
               <Text>Breite Lichte</Text>
-              <TextInput style={styles.input} placeholder="Breite Lichte" value={item.breite} onChangeText={(text) => handleChange(index, "breite", text)}/>
+              <TextInput style={styles.input} keyboardType="numeric" placeholder="Breite Lichte" value={item.breite} onChangeText={(text) => handleChange(index, "breite", text)}/>
               <Text>Höhe Lichte</Text>
-              <TextInput style={styles.input} placeholder="Höhe Lichte" value={item.hoehe} onChangeText={(text) => handleChange(index, "hoehe", text)}/>
+              <TextInput style={styles.input} keyboardType="numeric" placeholder="Höhe Lichte" value={item.hoehe} onChangeText={(text) => handleChange(index, "hoehe", text)}/>
               <Text>Farbe</Text>
               <TextInput style={styles.input} placeholder="Farbe" value={item.farbe} onChangeText={(text) => handleChange(index, "farbe", text)}/>
               <Text>Gewebe</Text>
               <TextInput style={styles.input} placeholder="Gewebe" value={item.gewebe} onChangeText={(text) => handleChange(index, "gewebe", text)}/>
               <Text>Maß X</Text>
-              <TextInput style={styles.input} keyboardType="numeric" placeholder="Maß X" value={item.masx} onChangeText={(text) => handleChange(index, "masx", text)}/>
+              <TextInput style={styles.input} placeholder="Maß X" value={item.masx} onChangeText={(text) => handleChange(index, "masx", text)}/>
               <Text>Maß Y</Text>
-              <TextInput style={styles.input} keyboardType="numeric" placeholder="Maß Y" value={item.masy} onChangeText={(text) => handleChange(index, "masy", text)}/>
+              <TextInput style={styles.input} placeholder="Maß Y" value={item.masy} onChangeText={(text) => handleChange(index, "masy", text)}/>
               <Text>Maß Z</Text>
-              <TextInput style={styles.input} keyboardType="numeric" placeholder="Maß Z" value={item.masz} onChangeText={(text) => handleChange(index, "masz", text)}/>
+              <TextInput style={styles.input} placeholder="Maß Z" value={item.masz} onChangeText={(text) => handleChange(index, "masz", text)}/>
               <Text>Lage Bürste</Text>
               <TextInput style={styles.input} placeholder="Lage der Bürste" value={item.buerste} onChangeText={(text) => handleChange(index, "buerste", text)}/>
               <Text>Öffnunfsrichtung</Text>
@@ -228,8 +228,8 @@ const EditItem = () => {
         style={styles.picker}
       >
         <Picker.Item label="Schiebeverschluss" value="" />
-        <Picker.Item label="Ja" value="Ja" />
-        <Picker.Item label="Nein" value="Nein" />
+        <Picker.Item label="Ohne" value="Ohne" />
+        <Picker.Item label="Innen" value="Innen" />
       </Picker>
               <Text>Griffhöhe</Text>
               <TextInput style={styles.input} placeholder="Griffhöhe" value={item.griff} onChangeText={(text) => handleChange(index, "griff", text)}/>
