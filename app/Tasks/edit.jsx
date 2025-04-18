@@ -145,7 +145,7 @@ const EditItem = () => {
         <Text>Telefon</Text>
         <TextInput style={styles.input} keyboardType="numeric" placeholder="Tel" value={tel} onChangeText={settel} multiline/>
         <Text>Email</Text>
-        <TextInput style={styles.input} placeholder="email" value={email} onChangeText={setemail} multiline/>
+        <TextInput style={styles.input} keyboardType="email-address" placeholder="email" value={email} onChangeText={setemail} multiline/>
         <Text>Steuernummer</Text>
         <TextInput style={styles.input} placeholder="Steuernummer" value={steuernummer} onChangeText={setsteuernummer} multiline/>
         <Text>Partita IVA</Text>
@@ -204,9 +204,9 @@ const EditItem = () => {
               <Text>Menge</Text>
               <TextInput style={styles.input} keyboardType="numeric" placeholder="Menge" value={item.menge} onChangeText={(text) => handleChange(index, "menge", text)}/>
               <Text>Breite Lichte</Text>
-              <TextInput style={styles.input} keyboardType="numeric" placeholder="Breite Lichte" value={item.breite} onChangeText={(text) => handleChange(index, "breite", text)}/>
+              <TextInput style={styles.input} placeholder="Breite Lichte" value={item.breite} onChangeText={(text) => handleChange(index, "breite", text)}/>
               <Text>Höhe Lichte</Text>
-              <TextInput style={styles.input} keyboardType="numeric" placeholder="Höhe Lichte" value={item.hoehe} onChangeText={(text) => handleChange(index, "hoehe", text)}/>
+              <TextInput style={styles.input} placeholder="Höhe Lichte" value={item.hoehe} onChangeText={(text) => handleChange(index, "hoehe", text)}/>
               <Text>Farbe</Text>
               <TextInput style={styles.input} placeholder="Farbe" value={item.farbe} onChangeText={(text) => handleChange(index, "farbe", text)}/>
               <Text>Gewebe</Text>
