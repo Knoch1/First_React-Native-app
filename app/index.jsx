@@ -83,8 +83,10 @@ const Index = () => {
               scrollEnabled={false}
               renderItem={({ item }) => (
                 <View style={styles.taskContainer}>
-                  <View>
-                    <Text style={styles.taskName}>{item.Name}</Text>
+                  <View style={styles.taskTextWrapper}>
+                    <Text style={styles.taskName}>
+                      {item.Name}
+                    </Text>
                   </View>
                   <View style={styles.buttonGroup}>
                     <TouchableOpacity
@@ -147,14 +149,20 @@ const styles = StyleSheet.create({
   },
   taskContainer: {
     flexDirection: "row",
+    alignItems: "flex-start", // Aligns buttons to top of text
     justifyContent: "space-between",
-    alignItems: "center",
     backgroundColor: "#fff",
     padding: 15,
     borderRadius: 5,
     marginBottom: 10,
     borderWidth: 1,
     borderColor: "#ddd",
+    gap: 10,
+  },
+
+  taskTextWrapper: {
+    flex: 1,
+    marginRight: 10,
   },
   buttonGroup: {
     flexDirection: "row",
@@ -183,6 +191,8 @@ const styles = StyleSheet.create({
   taskName: {
     fontSize: 16,
     fontWeight: "bold",
+    flexShrink: 1,
+    flexWrap: "wrap",
   },
   scrollContent: {
     padding: 20,
