@@ -69,7 +69,11 @@ const Index = () => {
         <View style={{paddingLeft:20,paddingRight:20}}>
         <TouchableOpacity
           style={styles.addButton}
-          onPress={() => router.push("Tasks/create")}
+          onPress={() => 
+            // router.push("Tasks/create")
+            router.push("Tasks/form")
+          }
+          
         >
           <Text style={styles.addButtonText}>+</Text>
         </TouchableOpacity>
@@ -100,10 +104,7 @@ const Index = () => {
                     <TouchableOpacity
                       style={styles.editButton}
                       onPress={() =>
-                        router.push({
-                          pathname: "Tasks/edit",
-                          params: { id: item.id },
-                        })
+                          router.push({ pathname: "Tasks/form", params: { id: item.id } })
                       }
                     >
                       <MaterialIcons name="edit" size={20} color="white" />

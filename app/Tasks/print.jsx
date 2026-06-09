@@ -13,7 +13,7 @@ const sendPDF = async (data) => {
       <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th, td { padding: 8px; border: 1px solid #ddd; text-align: left; }
         th { background-color: #f4f4f4; font-weight: bold; }
         tr:nth-child(even) { background-color: #f9f9f9; }
         tr:hover { background-color: #f1f1f1; }
@@ -66,7 +66,7 @@ const sendPDF = async (data) => {
       html: htmlContent,
     });
     const result = await MailComposer.composeAsync({
-      recipients: ["email"], // Replace with the recipient email
+      recipients: ["moritzprunster@gmail.com"], // Replace with the recipient email
       subject: `${data.Name}`,
       body: "Bitte für diesen Kunden ein Angebot erstellen.",
       attachments: [uri],
